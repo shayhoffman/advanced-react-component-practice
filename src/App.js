@@ -18,7 +18,7 @@ function App(props) {
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           {/*   <TopNav>   */}
-          <TopNav />
+          <TopNav messages={props.messages}/>
           {/*   </TopNav>   */}
 
 
@@ -82,7 +82,7 @@ function App(props) {
 
                     <div className="col-lg-4">
                         {/*   <TasksPanel>   */}
-                       <TasksPanel />
+                       <TasksPanel tasks={props.tasks}/>
                         {/*   </TasksPanel>   */}
 
 
@@ -91,7 +91,7 @@ function App(props) {
 
 
                         {/*   </TransactionsPanel>   */}
-                        <TransactionsPanel />
+                        <TransactionsPanel orders={props.orders}/>
                         {/*   </TransactionsPanel>   */}
 
                     </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
 
-function TransactionsPanel() {
+function TransactionsPanel(props) {
+    let transactionrows = props.orders.map(o=> <TransactionRow order= {o}/>)
     return (
         <div className="panel panel-default">
                             <div className="panel-heading">
@@ -19,9 +20,7 @@ function TransactionsPanel() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {/*   <TransactionRow>   */}
-                                            <TransactionRow />
-                                            {/*   </TransactionRow>   */}
+                                            {transactionrows}
                                         </tbody>
                                     </table>
                                 </div>
